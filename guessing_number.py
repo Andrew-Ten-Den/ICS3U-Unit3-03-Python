@@ -5,7 +5,9 @@
 # This program lets the user guess a number between 0 and 9
 
 
-import constants
+import random
+
+guess_variable = random.randint(0, 9)  # a number between 1 and 100
 
 
 def main():
@@ -15,13 +17,14 @@ def main():
     number_guessed = int(input("Enter a number between 0 and 9: "))
 
     # process & output
-    if number_guessed == constants.SET_NUMBER:
+    if number_guessed == guess_variable:
         print("You guessed correct!")
         print("")
         print("Done")
 
-    if number_guessed != constants.SET_NUMBER:
+    if number_guessed != guess_variable:
         print("You guessed wrong!")
+        print("The number was {}.".format(guess_variable))
         print("")
         print("Done")
 
