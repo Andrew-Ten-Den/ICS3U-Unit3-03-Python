@@ -19,7 +19,7 @@ def main():
   if number_guessed == guess_variable:
         print("You guessed correct!")
 
-  if number_guessed != guess_variable:
+  else:
         print("You guessed wrong!")
         print("The number was {}.".format(guess_variable))
 
